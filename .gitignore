@@ -1,0 +1,4 @@
+node_modules/
+.idea/
+src/app-compiled.js
+src/app-compiled.js.map

@@ -1,0 +1,25 @@
+body {
+    background: #fff;
+}
+
+.imgWall {
+    position: relative;
+}
+
+.imgHidden {
+    position: absolute;
+    left: -1000px;
+    top: -1000px;
+}
+
+.imgSelected {
+    position: absolute;
+}
+
+.imgFloating {
+    position: absolute;
+}
+
+.character {
+    border-radius: 50%;
+}
