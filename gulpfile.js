@@ -46,5 +46,5 @@ gulp.task('webserver', function () {
 });
 
 gulp.task('default', ['libs', 'css', 'webserver', 'es6'], () => {
-    gulp.watch('src/**/*', ['es6'])
+    gulp.watch(['src/**/*', 'app.css', 'index.html'], ['es6'])
 });

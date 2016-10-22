@@ -1,5 +1,10 @@
 body {
-    background: #fff;
+    background: #000;
+    color: #eeeeee;
+}
+
+.imgFullOpacity {
+    opacity: 1;
 }
 
 .imgWall {
@@ -16,6 +21,90 @@ body {
     position: absolute;
 }
 
+body, html {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.bodyDiv {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 10px;
+}
+
+.searchDiv {
+    display: flex;
+    align-self: center;
+    background: rgba(19, 26, 88, 0.6);
+    justify-content: center;
+    align-items: center;
+    height: 7em;
+    margin-left: 7em;
+    margin-right: 7em;
+    width: 50em;
+    padding: 3em;
+    border-radius: 44px;
+    flex-direction:column;
+}
+
+.suggestions {
+    display: flex;
+    position: absolute;
+    list-style-type: none;
+    flex-direction: column;
+    top: 398px;
+    text-align: center;
+    font-weight: 100;
+    color: #999;
+}
+
+.suggestions li {
+    cursor: pointer;
+    font-size: 2em;
+}
+
+.suggestions li:hover {
+    font-weight: 400;
+}
+
+.searchBox:focus {
+    border-bottom: 2px solid rgba(19, 26, 88, 0.47);
+    text-transform: capitalize;
+    outline: none;
+
+}
+.searchBox {
+    color: white;
+    background: transparent;
+    text-align: center;
+    font-size: 2em;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid whitesmoke;
+    width: 30em;
+    height: 2em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+
+.comicWall {
+    animation: MoveUpDown 30s linear infinite;
+    position: fixed;
+    background: #000;
+    opacity: 0.05;
+    text-align: center;
+    z-index: -99999;
+}
+
 .imgFloating {
     position: absolute;
 }
@@ -23,3 +112,185 @@ body {
 .character {
     border-radius: 50%;
 }
+
+
+
+
+/* Comic Information */
+.comicInformation {
+    display: flex;
+    flex: 1;
+    flex-direction:row;
+}
+
+.comicContent {
+    display: flex;
+    flex-direction:row;
+    flex: 0.5;
+}
+.comicRow {
+    display: flex;
+    flex-direction:row;
+    flex: 0.5;
+}
+.descriptionBox {
+    display: flex;
+    flex-direction:column;
+}
+
+.descriptionBox h1 {
+    font-size: 1.4em;
+    color: #ffffff;
+    text-align: center;
+}
+
+.descriptionBox .details {
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    height: auto;
+}
+
+.descriptionBox .details label {
+    font-weight: 100;
+    color: red;
+    margin: 0 10px;
+}
+
+.descriptionBox .details p {
+    font-weight: 100;
+    color: white;
+    /* height: 2em; */
+    margin: 0;
+    padding: 0;
+}
+
+.description {
+    font-weight:300;
+    font-size: 1.2em;
+    color: #777;
+    margin-left: 10px;
+}
+
+.comicContent img {
+    display: flex;
+    flex: .4;
+    height: 250px;
+}
+
+
+.charactersInComic {
+    display: flex;
+    flex: 0.5;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.charactersInComic h4 {
+    color: white;
+    font-size: 2em;
+}
+
+.charactersInComic img {
+    height: 100px;
+}
+
+.characterInformation {
+    display: flex;
+    flex: 1;
+    /*flex-direction: column;*/
+    justify-items: center;
+}
+
+.heroContainer {
+    display: flex;
+    flex-direction: column;
+    flex : 0.5;
+}
+
+.characterHeading {
+    font-size: 2em;
+    font-weight: 100;
+    text-align: center;
+}
+
+.characterImage {
+    align-self: center;
+}
+
+.characterDescription {
+    font-weight:100;
+    font-size: 1.3em;
+    width: 50%;
+    align-self: center;
+}
+
+.characterThumbnail {
+    margin: 10px;
+    border-radius:50%;
+}
+
+/** Animations **/
+
+@keyframes MoveUpDown {
+    0% {
+        top: 0;
+    }
+    50% {
+        top: -100px;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+/*
+ * FadeIn animation
+*/
+@-webkit-keyframes fadeInAnim {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInAnim {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation: fadeInAnim 1s linear;
+}
+
+/*
+ * FadeOut animation
+*/
+@-webkit-keyframes fadeOutAnim {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOutAnim {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.fadeOut {
+    animation: fadeOutAnim 1s linear;
+}
+
